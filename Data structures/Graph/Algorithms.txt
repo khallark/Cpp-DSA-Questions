@@ -1,0 +1,31 @@
+♦ Kahn's algorithm (Directed Acyclic Graphs [ only ]):
+    - Topological Sort.
+    - Cycle Detection. (Directed Graphs [ only ])
+
+♦ Dijkstra's Algorithm (Directed Graphs / Undirected Graphs [ Positively Weighted ones ]):
+    - Shortest Distance of all nodes from a source node.
+    - Can work only on the Graphs with POSITIVE WEIGHTS ONLY.
+
+♦ Prim's Algorithm (Undirected Graphs [ Weighted ones only ]):
+    - Minimum Spanning Tree of an undirected weighted graph.
+    - Requires Adjecency List.
+
+♦ Kruskal's Algorithm (Undirected Graphs [ Weighted ones only ]):
+    - Minimum Spanning Tree of an undirected weighted graph.
+    - Requires the Edges List.
+
+♦ Tarjan's Algorithm [ Time/Low Approach ] (Undirected Graphs):
+    - Number of Bridges in an undirected weighted graph.
+    - Bridge (Definition):
+        → A BRIDGE refers to an EDGE in a graph, which if BROKEN, Splits a SINGLE COMPONENT OF A GRAPH
+        into 2 COMPONENTS. 
+
+♦ Kosaraju's Algorithm [ DFS Approach ] (Directed Graphs [ only ]):
+    - Helps in finding out the (STRONGLY CONNECTED COMPONENTS) in a Directed Graph.
+    - Uses DFS Approach.
+
+♦ Bellman Ford's Algorithm (Directed Graphs / Undirected Graphs [ Weighted only ]):
+    - An extension of the Dijkstra's Algorithm.
+    - Finds out the Shortest Distance of all nodes from a source node.
+    - Also finds out if the Directed Graph has a Negative Cycle or not.
+    - Works on both Directed/Undirected Positively/Negatively Weighted Graphs.
