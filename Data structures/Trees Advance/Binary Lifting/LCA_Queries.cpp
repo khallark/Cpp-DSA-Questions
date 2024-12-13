@@ -106,6 +106,7 @@ int main() { // O(m * log n)
     return 0;
 }
 /*
+Sample input :
 27 8
 
 3 3 10 2
@@ -144,4 +145,7 @@ int main() { // O(m * log n)
 5 1
 7 21
 18 2
+
+Output :
+13 1 3 2 6 1 9 2
 */
