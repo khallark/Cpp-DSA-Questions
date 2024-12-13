@@ -18,7 +18,7 @@ vector<int> depth;
 vector<int> parent;
 vector<vector<int>> table;
 vector<vector<int>> tree;
-int n, m, max_depth = -1;
+int n, m;
 
 int LCA(int u, int v) {
     int upper = depth[u] < depth[v] ? u : v;
@@ -36,7 +36,7 @@ int LCA(int u, int v) {
 
     // finding the LCA
     if(u == v) return u;
-    REPR(j, log2(max_depth), 0) {
+    REPR(j, MAX, 0) {
         if(table[j][u] != table[j][v]) {
             u = table[j][u];
             v = table[j][v];
@@ -73,7 +73,6 @@ int main() { // O(m * log n)
         auto [node, lvl] = q.front();
         q.pop();
         depth[node] = lvl;
-        max_depth = max(max_depth, lvl);
         for(auto child : tree[node]) {
             if(!visited[child]) {
                 parent[child] = node;
