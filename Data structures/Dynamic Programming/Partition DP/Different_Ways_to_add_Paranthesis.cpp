@@ -56,5 +56,5 @@ vector<int> diffWaysToCompute(string expression) {
     return f(0, n - 1);
 }
 int main() {
-    cout << List(diffWaysToCompute("23+45-2*99-24+0"));
+    cout << List(diffWaysToCompute("23+45-2*99-24+0-123*3+658*43"));
 }
