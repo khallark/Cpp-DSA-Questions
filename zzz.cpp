@@ -88,11 +88,8 @@ int main() {
         {"Australia and Oceania", "Vanuatu", "Vegetables", "online", "L", "5/17/2012", "366653096", "5/31/2012", 9654, 154.06, 90.93, 1487295.24, 877838.22, 609457.02},
     };
 
-    // List sliced = sliceTable(sales, {"order priority", "order date", "sales channel", "total profit"});
-    // for(auto i : sliced) {
-    //     cout << i << endl;
-    // }
-    cout << sales;
+    // cout << sliceTable(sales, {"order priority", "order date", "sales channel", "total profit"})[0].size();
+    // cout << sales;
 
     return 0;
 }
