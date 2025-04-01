@@ -1,5 +1,6 @@
 #include <iostream>
-#include <matrix.h>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int lcs(string& s, string& t) {
