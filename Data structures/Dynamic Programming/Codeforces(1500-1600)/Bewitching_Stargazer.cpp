@@ -18,17 +18,6 @@ using namespace std;
 ll t, n, k;
 unordered_map<int, pair<ll, ll>> dp;
 
-// ll solve(ll l, ll r) {
-//     ll m = l + (r - l) / 2;
-//     if(r - l + 1 < k) return 0;
-//     if((r - l + 1) & 1) {
-//         return m + solve(l, m - 1) + solve(m + 1, r);
-//     }
-//     else {
-//         return solve(l, m) + solve(m + 1, r);
-//     }
-// }
-
 pair<ll, ll> solve(ll l, ll r) {
     ll L = r - l + 1;
 
