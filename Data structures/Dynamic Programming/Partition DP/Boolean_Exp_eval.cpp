@@ -80,7 +80,7 @@ int evaluateExp2(string & exp) {
 
 
 int main() {
-    string exp = "F|T^F";
+    string exp = "T|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F|F";
     cout << evaluateExp1(exp) << endl;
     return 0;
 }
