@@ -16,7 +16,7 @@ vector<int> bfs(vector<int> adj[], unordered_map<int, int> indegree, int n) {
         q.pop();
         ans.push_back(temp);
         for(auto i : adj[temp]) {
-            indegree[i] = indegree[i] > 0 ? indegree[i] - 1 : indegree[i];
+            indegree[i] = min(0, indegree[i] - 1);
             if(indegree[i] == 0) {
                 q.push(i);
             }

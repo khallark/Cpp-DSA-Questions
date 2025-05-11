@@ -13,23 +13,21 @@
 #define REPR(i, x, y) for(int i = x; i >= y; i--)
 using namespace std;
 
-int main() {
-    ll n;
-    cin >> n;
-    if(n <= 1) {
-        cout << n;
-        return 0;
-    }
-    vector<ll> pfs;
-    for(ll i = 2; i * i <= n; i++) {
-        if(n % i == 0) {
-            pfs.push_back(i);
-            while(n % i == 0) {
-                n /= i;
+int subsetXORSum(vector<int> nums) {
+    int ans = 0;
+    for(int i = 0; i < (1 << nums.size()); i++) {
+        int Xor = 0;
+        for(int j = 0; j < nums.size(); j++) {
+            if(i & (1 << j)) {
+                Xor ^= nums[j];
             }
         }
+        ans += Xor;
     }
-    if(n != 1) pfs.push_back(n);
-    for(auto i : pfs) cout << i << " ";
+    return ans;
+}
+
+int main() {
+    cout << subsetXORSum({1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12});
     return 0;
 }
