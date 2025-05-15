@@ -22,7 +22,9 @@ string to_stringWithPrecision(double value) {
     out << fixed << setprecision(10) << value;
     return out.str();
 }
+
 int maxPoints(vector<vector<int>>& points) {
+    #define tswp to_stringWithPrecision
     int n = points.size();
     unordered_map<string, unordered_set<string>> m;
     unordered_map<string, unordered_set<string>> undefined;
@@ -33,19 +35,19 @@ int maxPoints(vector<vector<int>>& points) {
                 double slope;
                 slope = double(points[i][1] - points[j][1]) /
                         double(points[i][0] - points[j][0]);
-                string key = to_stringWithPrecision(points[i][0]) + ','
-                            + to_stringWithPrecision(points[i][1]) + '-'
-                            + to_stringWithPrecision(slope);
+                string key = tswp(points[i][0]) + ','
+                            + tswp(points[i][1]) + '-'
+                            + tswp(slope);
                 m[key].insert({
-                    to_stringWithPrecision(points[i][0]) + ',' + to_stringWithPrecision(points[i][1]),
-                    to_stringWithPrecision(points[j][0]) + ',' + to_stringWithPrecision(points[j][1])
+                    tswp(points[i][0]) + ',' + tswp(points[i][1]),
+                    tswp(points[j][0]) + ',' + tswp(points[j][1])
                 });
             } else {
-                string key = to_stringWithPrecision(points[i][0]) + ','
-                            + to_stringWithPrecision(points[i][1]);
+                string key = tswp(points[i][0]) + ','
+                            + tswp(points[i][1]);
                 undefined[key].insert({
-                    to_stringWithPrecision(points[i][0]) + ',' + to_stringWithPrecision(points[i][1]),
-                    to_stringWithPrecision(points[j][0]) + ',' + to_stringWithPrecision(points[j][1])
+                    tswp(points[i][0]) + ',' + tswp(points[i][1]),
+                    tswp(points[j][0]) + ',' + tswp(points[j][1])
                 });
             }
         }

@@ -7,7 +7,7 @@ using namespace std;
 DEFINITION:
 A bipartite graph is a graph where its vertices can be
 divided into two sets, and every edge connects a vertex
-in one set to a vertex in the other set.
+from one set to a vertex from the other set.
 
 HOW TO IDENTIFY:
 If we take a BIPARTITE GRAPH and start coloring its nodes
